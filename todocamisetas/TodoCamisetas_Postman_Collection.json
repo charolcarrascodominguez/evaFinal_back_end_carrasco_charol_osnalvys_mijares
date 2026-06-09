@@ -1,0 +1,159 @@
+{
+  "info": {
+    "name": "TodoCamisetas API",
+    "_postman_id": "f7a5c5a1-1234-5678-9012-todocamisetas",
+    "description": "Colección completa API TodoCamisetas - Examen Desarrollo Backend",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:8082"
+    }
+  ],
+  "item": [
+    {
+      "name": "Camisetas",
+      "item": [
+        {
+          "name": "GET - Listar Camisetas",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/camisetas",
+              "host": ["{{base_url}}"],
+              "path": ["camisetas"]
+            }
+          }
+        },
+        {
+          "name": "POST - Crear Camiseta",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"titulo\": \"Camiseta Especial 2026\",\n  \"club\": \"Seleccion Chilena\",\n  \"pais\": \"Chile\",\n  \"tipo\": \"3era Camiseta\",\n  \"color\": \"Negro\",\n  \"precio\": 50000,\n  \"precio_oferta\": 45000,\n  \"detalles\": \"Edicion limitada\",\n  \"codigo_producto\": \"SCL2026E\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/camisetas",
+              "host": ["{{base_url}}"],
+              "path": ["camisetas"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Clientes",
+      "item": [
+        {
+          "name": "GET - Listar Clientes",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/clientes",
+              "host": ["{{base_url}}"],
+              "path": ["clientes"]
+            }
+          }
+        },
+        {
+          "name": "POST - Crear Cliente",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre_comercial\": \"NuevaTienda\",\n  \"rut\": \"77.123.456-7\",\n  \"direccion\": \"Ñuñoa, Santiago\",\n  \"categoria\": \"Regular\",\n  \"contacto_nombre\": \"Pedro Ramirez\",\n  \"contacto_email\": \"pedro@nuevatienda.cl\",\n  \"porcentaje_oferta\": 5\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/clientes",
+              "host": ["{{base_url}}"],
+              "path": ["clientes"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Tallas",
+      "item": [
+        {
+          "name": "GET - Listar Tallas",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/tallas",
+              "host": ["{{base_url}}"],
+              "path": ["tallas"]
+            }
+          }
+        },
+        {
+          "name": "POST - Crear Talla",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"XXXL\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/tallas",
+              "host": ["{{base_url}}"],
+              "path": ["tallas"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Precio Dinamico",
+      "item": [
+        {
+          "name": "GET - Precio Cliente Preferencial",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/precio/1/1",
+              "host": ["{{base_url}}"],
+              "path": ["precio", "1", "1"]
+            }
+          }
+        },
+        {
+          "name": "GET - Precio Cliente Regular",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/precio/1/2",
+              "host": ["{{base_url}}"],
+              "path": ["precio", "1", "2"]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
