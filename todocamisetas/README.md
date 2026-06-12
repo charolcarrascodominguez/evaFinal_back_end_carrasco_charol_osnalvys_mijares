@@ -1,5 +1,5 @@
 # API REST - TodoCamisetas
-Autor: Charol Carrasco
+Autor: Charol Carrasco y Osnalvys Mijares
 
 ## Arquitectura
 
